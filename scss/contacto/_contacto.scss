@@ -1,0 +1,19 @@
+@use "../utilities" as *;
+
+.card-form-body {
+  padding: 2rem;
+  border-radius: 1rem;
+  @extend %panel-cream;
+}
+
+.card-form-body,
+.card-form-title,
+.card-form-text h5,
+p {
+  color: var(--brand-cream);
+}
+
+.card-form-body,
+.btn-primary {
+  color: var(--brand-cream);
+}

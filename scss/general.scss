@@ -1,0 +1,98 @@
+@use "utilities" as *;
+
+$brand-brown: #2b241f;
+$brand-brown-deep: #1d160f;
+$brand-warm: #b55a2a;
+$brand-cream: #f5efe9;
+$brand-secondary: #5b514b;
+
+:root {
+  --brand-brown: #{$brand-brown};
+  --brand-brown-deep: #{$brand-brown-deep};
+  --brand-warm: #{$brand-warm};
+  --brand-cream: #{$brand-cream};
+  --brand-secondary: #{$brand-secondary};
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: var(--brand-cream);
+  color: var(--brand-brown-deep);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.navbar-brand,
+.nav-link,
+.display-1,
+.display-2,
+.display-3,
+.display-4,
+.display-5,
+.display-6 {
+  @extend %serif-heading;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.navbar {
+  background: linear-gradient(90deg, rgba(122, 59, 35, 0.95), rgba(181, 80, 42, 0.95), rgba(122, 59, 35, 0.95));
+  border-radius: 999px;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-brand,
+.nav-link {
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.85) !important;
+
+  &:hover,
+  &:focus,
+  &.active {
+    color: #ffffff !important;
+  }
+}
+
+.btn-dark {
+  background-color: var(--brand-brown);
+  border-color: var(--brand-brown);
+
+  &:hover,
+  &:focus {
+    background-color: #443a32;
+    border-color: #443a32;
+  }
+}
+
+.card {
+  border: 0;
+  background: #ffffff;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: #ced4da;
+}
+
+.input-group-text {
+  background-color: #ffffff;
+}
+
+@media (max-width: 991.98px) {
+  .navbar {
+    border-radius: 1.25rem;
+  }
+}

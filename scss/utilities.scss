@@ -1,0 +1,21 @@
+$shadow-soft: 0 4px 6px rgba(0, 0, 0, 0.1);
+$shadow-navbar: 0 14px 30px rgba(0, 0, 0, 0.2);
+
+%serif-heading {
+  font-family: "Playfair Display", serif;
+}
+
+%panel-cream {
+  background-color: var(--brand-warm);
+  box-shadow: $shadow-soft;
+}
+
+@mixin section-shadow($shadow: $shadow-soft) {
+  box-shadow: $shadow;
+}
+
+@mixin nav-shell($gradient: linear-gradient(90deg, rgba(122, 59, 35, 0.95), rgba(181, 80, 42, 0.95), rgba(122, 59, 35, 0.95))) {
+  background: $gradient;
+  border-radius: 999px;
+  box-shadow: $shadow-navbar;
+}

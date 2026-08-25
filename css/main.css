@@ -1,0 +1,133 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.navbar-brand,
+.nav-link,
+.display-1,
+.display-2,
+.display-3,
+.display-4,
+.display-5,
+.display-6 {
+  font-family: "Playfair Display", serif;
+}
+
+.card-form-body {
+  background-color: var(--brand-warm);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+:root {
+  --brand-brown: #2b241f;
+  --brand-brown-deep: #1d160f;
+  --brand-warm: #b55a2a;
+  --brand-cream: #f5efe9;
+  --brand-secondary: #5b514b;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: var(--brand-cream);
+  color: var(--brand-brown-deep);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.navbar {
+  background: linear-gradient(90deg, rgba(122, 59, 35, 0.95), rgba(181, 80, 42, 0.95), rgba(122, 59, 35, 0.95));
+  border-radius: 999px;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-brand,
+.nav-link {
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+.nav-link:hover, .nav-link:focus, .nav-link.active {
+  color: #ffffff !important;
+}
+
+.btn-dark {
+  background-color: var(--brand-brown);
+  border-color: var(--brand-brown);
+}
+.btn-dark:hover, .btn-dark:focus {
+  background-color: #443a32;
+  border-color: #443a32;
+}
+
+.card {
+  border: 0;
+  background: #ffffff;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: #ced4da;
+}
+
+.input-group-text {
+  background-color: #ffffff;
+}
+
+@media (max-width: 991.98px) {
+  .navbar {
+    border-radius: 1.25rem;
+  }
+}
+.merch-header {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.merch-header__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+  z-index: 0;
+  border-bottom-left-radius: 35px;
+  border-bottom-right-radius: 35px;
+}
+
+.merch-header .navbar,
+.merch-header .container,
+.merch-header .container.text-center {
+  position: relative;
+  z-index: 1;
+}
+
+.card-form-body {
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.card-form-body,
+.card-form-title,
+.card-form-text h5,
+p {
+  color: var(--brand-cream);
+}
+
+.card-form-body,
+.btn-primary {
+  color: var(--brand-cream);
+}
+
+/*# sourceMappingURL=main.css.map */
