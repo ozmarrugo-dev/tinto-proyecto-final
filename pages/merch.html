@@ -4,6 +4,11 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Tinto Café | Merch</title>
+        <meta name="description" content="Conocé la colección de objetos y accesorios esenciales de Tinto Café." />
+        <meta property="og:title" content="Tinto Café | Merch" />
+        <meta property="og:description" content="Objetos de marca y accesorios para acompañar tu ritual de café." />
+        <meta property="og:image" content="../images/Merch/merch-background.webp" />
+        <meta property="og:type" content="website" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -21,14 +26,14 @@
                         <a href="../index.html">
                             <img loading="eager" class="navbar-brand text-uppercase fw-bold" src="../images/Iconos/tinto-favicon.png" alt="Logo de Tinto Café" style="max-width: 72px;" />
                         </a>
-                        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#homeNavbar" aria-controls="homeNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#homeNavbar" aria-controls="homeNavbar" aria-expanded="false" aria-label="Abrir menú de navegación">
                             <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="collapse navbar-collapse" id="homeNavbar">
                             <ul class="navbar-nav mx-auto mb-0 gap-lg-4">
                                 <li class="nav-item"><a class="nav-link text-uppercase fw-semibold" href="../index.html">Inicio</a></li>
                                 <li class="nav-item"><a class="nav-link text-uppercase fw-semibold" href="shop.html">Shop</a></li>
-                                <li class="nav-item"><a class="nav-link active text-uppercase fw-semibold" href="merch.html">Merch</a></li>
+                                <li class="nav-item"><a class="nav-link active text-uppercase fw-semibold" aria-current="page" href="merch.html">Merch</a></li>
                                 <li class="nav-item"><a class="nav-link text-uppercase fw-semibold" href="ubicacion.html">Ubicación</a></li>
                                 <li class="nav-item"><a class="nav-link text-uppercase fw-semibold" href="contacto.html">Contacto</a></li>
                             </ul>
@@ -160,7 +165,8 @@
                      <path d="m2 6 10 7 10-7"></path>
                    </svg>
                  </span>
-                 <input type="email" class="form-control border-start-0" placeholder="Ingresa tu correo electrónico" required />
+                 <label class="visually-hidden" for="newsletter-email">Correo electrónico</label>
+                 <input type="email" class="form-control border-start-0" id="newsletter-email" name="email" placeholder="Ingresa tu correo electrónico" required />
                </div>
                <button type="submit" class="btn btn-dark">Suscribirse</button>
              </form>
@@ -199,3 +205,4 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
  </body>
+ </html>

@@ -19,3 +19,12 @@ $shadow-navbar: 0 14px 30px rgba(0, 0, 0, 0.2);
   border-radius: 999px;
   box-shadow: $shadow-navbar;
 }
+
+@mixin interactive-lift($distance: -2px) {
+  transition: transform 180ms ease, box-shadow 180ms ease;
+
+  &:hover,
+  &:focus-visible {
+    transform: translateY($distance);
+  }
+}

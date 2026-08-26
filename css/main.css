@@ -69,6 +69,10 @@ img {
 .btn-dark {
   background-color: var(--brand-brown);
   border-color: var(--brand-brown);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+.btn-dark:hover, .btn-dark:focus-visible {
+  transform: translateY(-2px);
 }
 .btn-dark:hover, .btn-dark:focus {
   background-color: #443a32;
@@ -78,6 +82,11 @@ img {
 .card {
   border: 0;
   background: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+.card:hover, .card:focus-visible {
+  transform: translateY(-4px);
 }
 
 .form-control:focus {
@@ -92,6 +101,40 @@ img {
 @media (max-width: 991.98px) {
   .navbar {
     border-radius: 1.25rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .navbar {
+    width: calc(100% - 2rem);
+    margin: 0.75rem auto;
+  }
+  .card-body,
+  .newsletter {
+    padding: 1.25rem !important;
+  }
+}
+@keyframes coffee-arrival {
+  from {
+    opacity: 0;
+    transform: translateY(0.75rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+main {
+  animation: coffee-arrival 500ms ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
   }
 }
 .card-text {
@@ -130,8 +173,7 @@ img {
 
 .card-form-body,
 .card-form-title,
-.card-form-text h5,
-p {
+.card-form-text {
   color: var(--brand-cream);
 }
 

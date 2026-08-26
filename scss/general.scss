@@ -43,9 +43,7 @@ img {
 }
 
 .navbar {
-  background: linear-gradient(90deg, rgba(122, 59, 35, 0.95), rgba(181, 80, 42, 0.95), rgba(122, 59, 35, 0.95));
-  border-radius: 999px;
-  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.2);
+  @include nav-shell;
   width: 90vw;
   margin: 1rem auto;
 }
@@ -74,6 +72,7 @@ img {
 .btn-dark {
   background-color: var(--brand-brown);
   border-color: var(--brand-brown);
+  @include interactive-lift;
 
   &:hover,
   &:focus {
@@ -85,6 +84,8 @@ img {
 .card {
   border: 0;
   background: #ffffff;
+  @include section-shadow;
+  @include interactive-lift(-4px);
 }
 
 .form-control:focus {
@@ -99,6 +100,45 @@ img {
 @media (max-width: 991.98px) {
   .navbar {
     border-radius: 1.25rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .navbar {
+    width: calc(100% - 2rem);
+    margin: 0.75rem auto;
+  }
+
+  .card-body,
+  .newsletter {
+    padding: 1.25rem !important;
+  }
+}
+
+@keyframes coffee-arrival {
+  from {
+    opacity: 0;
+    transform: translateY(0.75rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+main {
+  animation: coffee-arrival 500ms ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
   }
 }
 .card-text{
