@@ -1,7 +1,7 @@
 @use "../utilities" as *;
 
 .card-form-body {
-  padding: 2rem;
+  padding: 1.5rem;
   border-radius: 1rem;
   @extend %panel-cream;
 }
